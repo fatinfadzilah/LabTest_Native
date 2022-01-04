@@ -5,7 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-
+import android.widget.EditText
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,17 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+    val web = findViewById<EditText>(R.id.EditText1)
+    var add_web: String = web.getText().toString()
     fun getUrlFromIntent(view: View) {
-            val url = "http://www.google.com"
+            //val url = "http://www.google.com"
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
+            intent.data = Uri.parse(add_web)
             startActivity(intent)
     }
 
+    val call = findViewById<EditText>(R.id.EditText2)
+    var phone_number: String = call.getText().toString()
     fun call(view: View) {
-        val dialIntent = Intent(Intent.ACTION_DIAL)
-        dialIntent.data = Uri.parse("tel:" + "013-7741998")
+        val dialIntent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phone_number))
         startActivity(dialIntent)
     }
 

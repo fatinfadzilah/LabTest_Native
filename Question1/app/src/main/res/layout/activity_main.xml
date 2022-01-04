@@ -13,39 +13,42 @@
 
         <EditText
             android:id="@+id/EditText1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="this is web address"
+            android:hint="This is web address"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/Button1"
-            android:layout_width="211dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:onClick="getUrlFromIntent"
             android:text="Read"
+            android:textSize="20sp"
             tools:ignore="OnClick" />
 
         <EditText
             android:id="@+id/EditText2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="phone Number"
+            android:hint="Phone Number"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/Button2"
-            android:layout_width="208dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Call"
             android:onClick="call"
-            />
+            android:text="Call"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
